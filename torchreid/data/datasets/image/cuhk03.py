@@ -21,11 +21,11 @@ class CUHK03(ImageDataset):
         - splits: 20 (classic).
     """
     dataset_dir = 'cuhk03'
-    dataset_url = 'https://drive.google.com/u/0/uc?export=download&confirm=qosu&id=0BxJeH3p7Ln48djNVVVJtUXh6bXc'
+    dataset_url = None
 
     def __init__(
         self,
-        root='',
+        root='/content/drive/MyDrive/cuhk03_release/',
         split_id=0,
         cuhk03_labeled=False,
         cuhk03_classic_split=False,
