@@ -93,8 +93,9 @@ class ViT(nn.Module):
         channels = 3, 
         dim_head = 64, 
         dropout = 0., 
-        emb_dropout = 0., 
-        loss = 'xent'):
+        emb_dropout = 0.,
+        loss = 'softmax',
+        **kwargs):
 
         super().__init__()
         assert image_size % patch_size == 0, 'Image dimensions must be divisible by the patch size.'
