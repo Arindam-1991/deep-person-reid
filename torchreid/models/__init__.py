@@ -72,7 +72,7 @@ __model_factory = {
     'osnet_x0_5': osnet_x0_5,
     'osnet_x0_25': osnet_x0_25,
     'osnet_ibn_x1_0': osnet_ibn_x1_0,
-    'osnet_ain_x1_0': osnet_ain_x1_0
+    'osnet_ain_x1_0': osnet_ain_x1_0,
     # Visual transformer
     'ViT': vit
 }
