@@ -21,6 +21,7 @@ from .resnet_ibn_a import *
 from .resnet_ibn_b import *
 from .shufflenetv2 import *
 from .inceptionresnetv2 import *
+from .visualTransformer import *
 
 __model_factory = {
     # image classification models
@@ -72,6 +73,8 @@ __model_factory = {
     'osnet_x0_25': osnet_x0_25,
     'osnet_ibn_x1_0': osnet_ibn_x1_0,
     'osnet_ain_x1_0': osnet_ain_x1_0
+    # Visual transformer
+    'ViT': vit
 }
 
 
@@ -115,5 +118,5 @@ def build_model(
         num_classes=num_classes,
         loss=loss,
         pretrained=pretrained,
-        use_gpu=use_gpu
+        use_gpu=use_gpu,
     )
