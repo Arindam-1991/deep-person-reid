@@ -89,7 +89,7 @@ def show_avai_models():
 
 
 def build_model(
-    name, num_classes, loss='softmax', pretrained=True, use_gpu=True
+    name, num_classes, loss='softmax', pretrained=True, use_gpu=True, *args, **kwargs
 ):
     """A function wrapper for building a model.
 
@@ -119,4 +119,5 @@ def build_model(
         loss=loss,
         pretrained=pretrained,
         use_gpu=use_gpu,
+        *args, **kwargs
     )
