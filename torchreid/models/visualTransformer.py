@@ -136,10 +136,16 @@ class ViT(nn.Module):
 
         x = self.to_cls_token(x[:, 0])
         
+        y = self.mlp_head(x)
+        
+        if not self.training:
+            return y
+        
         if self.loss == 'softmax':
-            return self.mlp_head(x)
-        elif self.loss == 'triplet':
-            return self.mlp_head(x), x
+            return y
+        elif self.loss == 'triplet':  
+#             print("MLP head shape:",self.mlp_head(x).shape)
+            return y, x
         else:
             raise KeyError("Unsupported loss: {}".format(self.loss))
         
