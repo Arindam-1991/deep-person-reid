@@ -89,8 +89,6 @@ class Transformer(nn.Module):
         return x
 
     
-   
-
 class ViT(nn.Module):
     def __init__(self, *, image_size, patch_size, num_classes, dim, depth, heads, mlp_dim, 
                  pool = 'cls', 
@@ -151,9 +149,9 @@ class ViT(nn.Module):
             return y, x
         else:
             raise KeyError("Unsupported loss: {}".format(self.loss))
-    
-      
-  def vit(num_classes, loss = 'softmax', pretrained=True, **kwargs):
+            
+            
+def vit(num_classes, loss = 'softmax', pretrained=True, **kwargs):
     model = ViT(
         num_classes=num_classes,
         loss=loss,
