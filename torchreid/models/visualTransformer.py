@@ -119,6 +119,8 @@ class ViT(nn.Module):
             nn.LayerNorm(dim),
             nn.Linear(dim, num_classes)
         )
+        
+        self.loss = loss
 
     def forward(self, img, mask = None):
         p = self.patch_size
